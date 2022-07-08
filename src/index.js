@@ -1,6 +1,5 @@
 import './style.css';
-function hello(){
-    console.log("hello");
-}
+import Background from './images/background.png';
+import render from './modules/render';
 
-hello()
+render();

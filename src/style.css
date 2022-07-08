@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:url('./images/background.png');
+    /*might need to switch to background-attachment: scroll;*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, .5);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    
+
+}
+main{
+    height: 85vh;
+}
+
+.home-page{
+    background-color: white;
+}
