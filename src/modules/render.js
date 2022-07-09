@@ -1,4 +1,4 @@
-import loadHome from "./home";
+import {loadHome,Slider}from "./home";
 
 function createHeader(){
     const header = document.createElement('header');
@@ -66,7 +66,11 @@ function render(){
     document.body.appendChild(createHeader());
     document.body.appendChild(main);
     document.body.appendChild(footer);
-    loadHome()
+    loadHome();
+    
+    
+   
+    
 }
 
 
@@ -74,7 +78,8 @@ function mainFinder(data){
     const main = document.querySelector('main')
     main.innerHTML = '';
     if(data === 'home'){
-        loadHome();
+        loadHome()
+        
     }
     else{
         main.classList.remove('home-page')

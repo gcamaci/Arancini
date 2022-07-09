@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -9,7 +10,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    
 }
 
 header{
@@ -22,10 +23,31 @@ header{
     
 
 }
-main{
-    height: 85vh;
-}
 
+img{
+    width: 100%;
+}
 .home-page{
     background-color: white;
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.slider{
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 15px;
+    
+    
+}
+.slider-container{
+    display:flex;
+    
+    height:600px;
+    transform: translate(0);
+    transition: transform .8s ease-in-out;
 }
