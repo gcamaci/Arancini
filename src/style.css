@@ -21,11 +21,12 @@ header{
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     
-
 }
 
 img{
-    width: 100%;
+   width: 100%;
+   height: auto;
+   
 }
 .home-page{
     background-color: white;
@@ -33,21 +34,73 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    justify-items: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .slider{
+    position: relative;
     width: 100%;
+    height: 80%;
     overflow: hidden;
     box-shadow: 0 0 15px;
-    
-    
+    border-radius: 15px;
+
 }
 .slider-container{
     display:flex;
-    
-    height:600px;
+    height: 100%;
     transform: translate(0);
     transition: transform .8s ease-in-out;
+}
+.btn-container{
+    position:absolute;
+    top: 50%;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.banner-container{
+    min-width: 400px;
+    width: 80%;
+    height: 300px;
+    box-shadow: 0 0 15px;
+    background-color: rgba(255, 255, 255, .6);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.banner-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.banner-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.banner-btn{
+    width: 100px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+footer{
+    width: 100vw;
+    background-color: rgba(255, 255, 255, .6);
+    height: 5vh;
 }

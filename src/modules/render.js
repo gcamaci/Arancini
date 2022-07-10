@@ -1,4 +1,5 @@
-import {loadHome,Slider}from "./home";
+import {loadHome,Slider} from "./home";
+import {loadMenu} from "./menu"
 
 function createHeader(){
     const header = document.createElement('header');
@@ -60,18 +61,7 @@ function createNav(){
 
 
 
-function render(){
-    const main = document.createElement('main');
-    const footer = document.createElement('footer');
-    document.body.appendChild(createHeader());
-    document.body.appendChild(main);
-    document.body.appendChild(footer);
-    loadHome();
-    
-    
-   
-    
-}
+
 
 
 function mainFinder(data){
@@ -82,9 +72,21 @@ function mainFinder(data){
         
     }
     else{
-        main.classList.remove('home-page')
+        main.innerHTML = '';
+        loadMenu();
+        main.classList.remove('home-page');
+
 
     }
+
+}
+function render(){
+    const main = document.createElement('main');
+    const footer = document.createElement('footer');
+    document.body.appendChild(createHeader());
+    document.body.appendChild(main);
+    document.body.appendChild(footer);
+    loadHome();
 
 }
 export default render;

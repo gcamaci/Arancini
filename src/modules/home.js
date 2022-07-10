@@ -38,7 +38,11 @@ const makeSlider = () => {
     carFive.alt = "";
     carouselSlide.appendChild(carFive);
 
-    const btnContainer = document.createElement('div')
+    const btnContainer = document.createElement('div');
+    btnContainer.classList.add('btn-container');
+
+    //change this all to divs with background URL. Will fit better. 
+    
     //buttons
     const prevBtn = document.createElement('button');
     prevBtn.id = 'prevBtn';
@@ -56,13 +60,13 @@ const makeSlider = () => {
    return slideContainer;
 }
 
+
 class Slider{
     constructor({
         sliderSelector = '.slider',
         sliderContainerSelector = '.slider-container',
         previousSelector = '#prevBtn',
         nextSelector = '#next',
-        transitionTime = 3000,
 
     } = {} ){
         this.slider = document.querySelector(sliderSelector);
@@ -91,7 +95,58 @@ class Slider{
         this.nextBtn.addEventListener('click',this.nextSlide.bind(this))
         this.previousBtn.addEventListener('click',this.previousSlide.bind(this))
     }
-}
+};
+
+const buildBanner = () => {
+    const banner = document.createElement('div');
+    banner.classList.add('banner-container');
+
+   
+
+    const bannerTitle = document.createElement('div');
+    bannerTitle.classList.add('banner-title');
+
+    const bannerHeader = document.createElement('h2')
+    bannerHeader.textContent = "Benvenuti a Tutti";
+
+    const bannerPara = document.createElement('p');
+    bannerPara.innerText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequatur voluptatum commodi exercitationem. Perspiciatis cupiditate placeat laudantium iure tempore aliquid nostrum voluptate";
+    
+    
+    bannerTitle.appendChild(bannerHeader);
+    bannerTitle.appendChild(bannerPara);
+
+    banner.appendChild(bannerTitle);
+    
+
+
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('banner-btn-container');
+
+    const menuBtn = document.createElement('button');
+    menuBtn.type = 'button';
+    menuBtn.innerText = "Menu"
+    menuBtn.classList.add('banner-menu', 'banner-btn');
+    //menuBtn.classList.add('banner-btn','');
+
+
+    const contactBtn = document.createElement('button');
+    contactBtn.type = 'button';
+    contactBtn.innerText = 'Contact';
+    contactBtn.classList.add('banner-contact','banner-btn');
+    //contactBtn.classList.add('banner-btn')
+
+    buttonContainer.appendChild(menuBtn);
+    buttonContainer.appendChild(contactBtn);
+
+    banner.appendChild(buttonContainer);
+    
+
+    
+
+
+    return banner
+};
 
 
 
@@ -100,6 +155,7 @@ const loadHome = () => {
     const main = document.querySelector('main');
     main.classList.add('home-page');
     main.appendChild(makeSlider());
+    main.appendChild(buildBanner());
     new Slider();
     
 
