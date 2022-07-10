@@ -153,6 +153,8 @@ const buildBanner = () => {
 
 const loadHome = () => {
     const main = document.querySelector('main');
+    main.innerHTML = '';
+    main.classList.remove('menu-page','about-page','contact-page');
     main.classList.add('home-page');
     main.appendChild(makeSlider());
     main.appendChild(buildBanner());

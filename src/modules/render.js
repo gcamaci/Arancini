@@ -74,7 +74,7 @@ function mainFinder(data){
     else{
         main.innerHTML = '';
         loadMenu();
-        main.classList.remove('home-page');
+        
 
 
     }

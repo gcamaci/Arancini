@@ -28,15 +28,24 @@ img{
    height: auto;
    
 }
-.home-page{
-    background-color: white;
+main{
     height: 85vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.home-page{
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    
+    
+}
+.menu-page{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:5px;
     
 }
 
