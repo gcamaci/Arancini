@@ -5,21 +5,27 @@
 }
 
 body{
+    position: relative;
     background:url('./images/background.png');
     /*might need to switch to background-attachment: scroll;*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    backdrop-filter: 8px;
     
 }
 
 header{
     width: 100vw;
     height: 10vh;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgb(250, 141, 32);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
     
 }
 
@@ -30,22 +36,31 @@ img{
 }
 main{
     height: 85vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(8, 8, 8, 0.679);
 }
 .home-page{
-    
+   
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
     padding: 20px;
+    z-index: -1;
+
     
     
 }
 .menu-page{
+    
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:5px;
+    grid-template-columns: 1fr 2fr;
+    gap:10px;
+    
+    background-color: #fffaf0db;
+    
+    
+    
+    
     
 }
 
@@ -101,15 +116,69 @@ main{
     width: 100px;
     height: 50px;
 }
+.pizza-Menu{
+    
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/menu-background.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-color: rgba(8, 8, 8, 0.4);
+    
+    
+    
+    
+    
+}
+.build-your-own{
+    box-shadow: 0 0 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #fffaf0db;
+    border: 5px solid orange;
+    justify-self: center;
+    
+}
+.toppings ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
 
+}
+.top{
+    text-align: center;
+    list-style: none;
+}
 
-
-
+.specials{
+    box-shadow: 0 0 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #fffaf0db;
+    border: 5px solid orange;
+    height: 300px;
+    justify-self: center;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
 
 
 
 footer{
     width: 100vw;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgb(250, 141, 32);
+    position: sticky;
+    bottom: 0;
     height: 5vh;
+    z-index: 2;
+    
 }

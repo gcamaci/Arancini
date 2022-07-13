@@ -1,5 +1,8 @@
 const createToppings = () => {
     const toppingsContainer = document.createElement('div');
+    toppingsContainer.classList.add('toppings');
+    const toppingList = document.createElement('ul');
+    
     const toppings = [
         'Pepperoni',
         'Sausage',
@@ -12,14 +15,51 @@ const createToppings = () => {
         'Hot Giardenera',
         'Basil'
     ]
-    toppingsContainer.classList.add('toppings');
+    
+    toppings.forEach((topping)=>{
+        const item = document.createElement('li');
+        item.innerText = topping;
+        item.classList.add('top');
+        toppingList.appendChild(item)
 
+    });
 
-    const toppingList = document.createElement('ul');
+    toppingsContainer.appendChild(toppingList);
 
 
     return toppingsContainer
 };
+
+
+const newCard = (name,desc,price,img) => {
+    const card = document.createElement('div');
+    card.classList.add('menu-card');
+
+    
+
+
+
+    return card
+}
+
+const menuCardContainer = () => {
+    const menuContainer = document.createElement('div');
+    menuContainer.classList.add('card-container');
+
+
+    //menuContainer.appendChild(menuCard())
+
+    return menuContainer;
+
+};
+
+
+
+
+
+
+
+
 
 class Menu{
 
@@ -31,7 +71,9 @@ class Menu{
     pizzaMenu(){
 
         this.page.classList.add('pizza-Menu')
-        this.header.innerText = "pizza";
+        this.header.innerText = "Pizza";
+        
+        this.header.style.fontSize = '6rem'
         this.page.appendChild(this.header);
 
         const buildYourOwn = document.createElement('div');
@@ -39,39 +81,28 @@ class Menu{
         //build your own markup
         const ownTitle = document.createElement('h2');
         ownTitle.innerText = 'Build your own';
+
         const buildDisc = document.createElement('p')
         buildDisc.classList.add('build-disc');
         buildDisc.innerText = 'Choose 3 of any toppings, adittional toppings $1.50';
         
         buildYourOwn.appendChild(ownTitle);
         buildYourOwn.appendChild(buildDisc);
+        buildYourOwn.appendChild(createToppings());
 
 
-        //build your own topping list.
-        const toppings = document.createElement('div');
-        toppings.classList.add('toppings');
+        const specials = document.createElement('div');
+        specials.classList.add('specials');
+
+        const specialTitle = document.createElement('h2');
+        specialTitle.innerText = 'Specials'
 
 
-
-
-
-
-
-
-
-
-
-        buildYourOwn.appendChild(toppings);
-
-        this.page.appendChild(buildYourOwn);
+        specials.appendChild(specialTitle);
         
-        return this.page
-    }
-
-    appetizers(){
-        //this.page.innerHTML = ''
-        this.header.innerText = "world"
-        this.page.appendChild(this.header);
+        this.page.appendChild(buildYourOwn);
+        this.page.appendChild(specials);
+        
         return this.page
     }
 
@@ -88,7 +119,7 @@ class Menu{
     const appetizers = new Menu();
 
     main.appendChild(pizza.pizzaMenu())
-    main.appendChild(appetizers.appetizers())
+    main.appendChild(menuCardContainer())
 
 
  };
