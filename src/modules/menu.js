@@ -3,6 +3,9 @@ import arancini from '../images/arancini.png';
 import panzeroti from '../images/panzerotti.png';
 import beef from '../images/italian-beef.png';
 import sfincone from '../images/sfincione.png';
+import eggplant from '../images/eggplant.png';
+import nutella from '../images/nutella.png';
+import cornetto from '../images/cornetto.png';
 
 const createToppings = () => {
     const toppingsContainer = document.createElement('div');
@@ -66,11 +69,6 @@ const newCard = (name,desc,price,item) => {
     card.append(image,namePrice,description);
 
 
-
-    
-
-
-
     return card
 }
 
@@ -87,47 +85,47 @@ const menuCardContainer = () => {
 
         },
         {
-            name:"Arancini",
-            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
-            price: "$7.99",
+            name:"Panelle",
+            desc:"Sicilian fritters made from chickpea flour, with lemon and pepper",
+            price: "$4.99",
             picture: panelle
 
         },
         {
-            name:"Arancini",
-            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
-            price: "$7.99",
+            name:"Panzeroti",
+            desc:"Deep fried dough pocket filled with fresh tomato sauce, cheese, and basil",
+            price: "$3.99",
             picture: panzeroti
         },
         {
-            name:"Arancini",
-            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            name:"Italian Beef",
+            desc:"Classic Chicago beef with your choice of peppers",
             price: "$7.99",
             picture: beef
         },
         {
-            name:"Arancini",
-            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
-            price: "$7.99",
+            name:"Sfincione",
+            desc:"Sicilian style thick cut pizza, by the slice",
+            price: "$2.99",
             picture: sfincone
         },
         {
-            name:"Arancini",
-            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
-            price: "$7.99",
-            picture: arancini
+            name:"Eggplant Parmesean",
+            desc:"Eggplant Parmesean Sandwhich",
+            price: "$5.99",
+            picture: eggplant
         },
         {
-            name:"Arancini",
-            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            name:"Nutella Crepes",
+            desc:"Nutella Crepes with strawberries",
             price: "$7.99",
-            picture: arancini
+            picture: nutella
         },
         {
-            name:"Arancini",
-            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
-            price: "$7.99",
-            picture: arancini
+            name:"Cornetti",
+            desc:"Fresh Cornetti (nutella, peach, cream) and a Espresso",
+            price: "$9.99",
+            picture: cornetto
         },
 
     ]
@@ -141,12 +139,6 @@ const menuCardContainer = () => {
     return menuContainer;
 
 };
-
-
-
-
-
-
 
 
 
