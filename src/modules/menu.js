@@ -140,7 +140,51 @@ const menuCardContainer = () => {
 
 };
 
+const createSpecial = () => {
+    const specialContainer = document.createElement('div');
+    specialContainer.classList.add('special-container')
+    const specials = [
+        {
+            name: 'The Giuseppe',
+            desc: 'Pepperoni, Sausage, Red Pepper, Roasted Garlic, Pesto'
+        },
+        {
+            name: 'The Giuseppe',
+            desc: 'Pepperoni, Sausage, Red Pepper, Roasted Garlic'
 
+        },
+        {
+            name: 'Vegetarian',
+            desc: 'Ricotta and Spinach'
+
+        },
+        {
+            name: 'Maragita',
+            desc: 'Classic sweet tomato sauce with fresh Mozzarella Cheese and Basil'
+        },
+        {
+            name: 'Faccia di Vechia',
+            desc: 'Bread with a coating of Olive Oil, Salt, Pepper, Oregeno and Crushed red pepper'
+
+        }
+    ]
+
+    specials.forEach((special) => {
+        const list = document.createElement('ul');
+        list.classList.add('flex-list')
+        const listName = document.createElement('li');
+        listName.innerText = special.name;
+        const listDesc = document.createElement('li');
+        listDesc.innerText = special.desc;
+
+        list.append(listName,listDesc);
+        specialContainer.appendChild(list);
+
+
+    });
+
+    return specialContainer;
+};
 
 class Menu{
 
@@ -175,10 +219,15 @@ class Menu{
         specials.classList.add('specials');
 
         const specialTitle = document.createElement('h2');
-        specialTitle.innerText = 'Specials'
+        specialTitle.innerText = 'Specials';
+
+        
+
+
 
 
         specials.appendChild(specialTitle);
+        specials.appendChild(createSpecial())
         
         this.page.appendChild(buildYourOwn);
         this.page.appendChild(specials);

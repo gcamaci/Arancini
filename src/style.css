@@ -149,9 +149,30 @@ main{
     border-radius: 25px;
     background-color: #fffaf0db;
     border: 5px solid orange;
-    
-    
-    
+    display: grid;
+    gap:5px;
+   
+
+}
+.specials h2{
+    max-height: 200px;
+}
+.special-container{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+}
+.flex-list{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: flex-start;
+    height: 100%;
+    align-items: center;
+    border-bottom: 1px solid orange;
+}
+.flex-list li{
+    list-style: none;
+    text-align: left;
+
 }
 .card-container{
     display: grid;
