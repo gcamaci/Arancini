@@ -1,3 +1,9 @@
+import panelle from '../images/panelle.png';
+import arancini from '../images/arancini.png';
+import panzeroti from '../images/panzerotti.png';
+import beef from '../images/italian-beef.png';
+import sfincone from '../images/sfincione.png';
+
 const createToppings = () => {
     const toppingsContainer = document.createElement('div');
     toppingsContainer.classList.add('toppings');
@@ -31,9 +37,35 @@ const createToppings = () => {
 };
 
 
-const newCard = (name,desc,price,img) => {
+const newCard = (name,desc,price,item) => {
     const card = document.createElement('div');
     card.classList.add('menu-card');
+
+    const namePrice = document.createElement('div');
+    namePrice.classList.add('name-price');
+
+    const header = document.createElement('h2');
+    header.classList.add('card-header');
+    header.innerText = name;
+
+    const cardPrice = document.createElement('p');
+    cardPrice.classList.add('card-price');
+    cardPrice.innerText = price;
+
+    
+    const description = document.createElement('p');
+    description.classList.add('card-desc');
+    description.innerText = desc;
+
+    const image = document.createElement('img');
+    image.classList.add('img')
+    image.src = item;
+
+    namePrice.append(header,cardPrice)
+
+    card.append(image,namePrice,description);
+
+
 
     
 
@@ -46,8 +78,65 @@ const menuCardContainer = () => {
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('card-container');
 
+    const menuArray = [
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: arancini
 
-    //menuContainer.appendChild(menuCard())
+        },
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: panelle
+
+        },
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: panzeroti
+        },
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: beef
+        },
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: sfincone
+        },
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: arancini
+        },
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: arancini
+        },
+        {
+            name:"Arancini",
+            desc:"Balls of rice stuffed with peas, meat sauce, and cheese. 4CT ",
+            price: "$7.99",
+            picture: arancini
+        },
+
+    ]
+
+
+    menuArray.forEach((item)=>{
+        menuContainer.appendChild(newCard(item.name,item.desc,item.price,item.picture))
+    })
+    
 
     return menuContainer;
 
@@ -72,8 +161,7 @@ class Menu{
 
         this.page.classList.add('pizza-Menu')
         this.header.innerText = "Pizza";
-        
-        this.header.style.fontSize = '6rem'
+        this.header.style.fontSize = '4rem'
         this.page.appendChild(this.header);
 
         const buildYourOwn = document.createElement('div');
