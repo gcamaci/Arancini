@@ -54,6 +54,10 @@ main{
     background-color: #fffaf0db;
 }
 
+.contact-page{
+    padding: 20px;
+}
+
 .slider{
     position: relative;
     width: 100%;
@@ -178,8 +182,8 @@ main{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,1fr);
-    padding: 20px;
-    gap: 20px;
+    padding: 10px;
+    gap: 10px;
     height: 85vh;
 }
 

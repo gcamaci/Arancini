@@ -1,5 +1,6 @@
-import {loadHome,Slider} from "./home";
-import {loadMenu} from "./menu"
+import {loadHome} from "./home";
+import {loadMenu} from "./menu";
+import{loadContact} from './contact'
 
 function createHeader(){
     const header = document.createElement('header');
@@ -71,12 +72,11 @@ function mainFinder(data){
         loadHome()
         
     }
-    else{
-        main.innerHTML = '';
+    else if(data === 'menu'){
         loadMenu();
-        
-
-
+    }
+    else if(data === 'contact'){
+        loadContact();
     }
 
 }
