@@ -6,26 +6,28 @@
 
 body{
     
-    background:url('./images/background.png');
+    
     /*might need to switch to background-attachment: scroll;*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     backdrop-filter: 8px;
-    height: 100vh;
+    min-height: 100vh;
+    
+    background-color: whitesmoke;
     
     
 }
 
 header{
-    width: 100vw;
+    
     height: 10vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     z-index: 1;
     overflow: hidden;
-    background-color: rgb(250, 141, 32);
+    background-color: rgb(236, 149, 18); 
 
     
 }
@@ -36,32 +38,26 @@ img{
    
 }
 main{
-    height:85vh;
-    background-color: rgba(8, 8, 8, 0.679);
+    min-height:85vh;
+    background-color: whitesmoke;
+
 }
 .home-page{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    
     padding: 20px;
     z-index: -1; 
     
+    
 }
 .menu-page{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: #fffaf0db;
-}
 
-.contact-page{
-    padding: 20px;
+    background-color: white;
 }
 
 .slider{
     position: relative;
-    width: 100%;
-    height: 80%;
+    width: 500px;
+    height: 500px;
     overflow: hidden;
     box-shadow: 0 0 15px;
     border-radius: 15px;
@@ -69,6 +65,7 @@ main{
 }
 .slider-container{
     display:flex;
+    
     height: 100%;
     transform: translate(0);
     transition: transform .8s ease-in-out;
@@ -111,59 +108,127 @@ main{
     height: 50px;
 }
 .pizza-Menu{
+
+    
     display: grid;
-    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-columns:1fr 3fr 1fr;
+    grid-template-rows: 50px  1fr;
     background-image: url('./images/menu-background.png');
     background-size: cover;
     background-position: center;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: rgba(8, 8, 8, 0.4);
-    padding: 20px;
-    gap: 20px;
-    height: 85vh;
     
+    
+    
+    gap: 20px;
+    padding: 10px;
+    
+    background-size: cover;
+    background-position: center;
+    
+    min-height: 90vh;
 
+}
+.pizza-container{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 100%;
+    border: 5px solid rgb(236, 149, 18);
+    border-radius:25px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    background-color: rgba(255, 255, 255, 0.865);
+    padding: 10px;
+    gap: 20px;
+    min-height: 600px;
+    box-shadow: 0 0 15px;
+    height: 100%;
+    
+    
+    
+}
+.pizza-Menu h1{
+    grid-column: 2/3;
+    font-size: 8rem;
+    color: black;
+    
+    margin-bottom: 5px;
+}
+
+.pizza-Menu h2{
+    font-size: 2rem;
+    
+    border-radius: 25px;
+    color: black;
+    width: 100%;
+    
+}
+.pizza-img1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+}
+.pizza-img2{
+    grid-row: 2/3;
+    grid-column: 3/4;
 }
 
 .build-your-own{
-    box-shadow: 0 0 15px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 25px;
-    background-color: #fffaf0db;
-    border: 5px solid orange;
-    justify-self: center;
+    
+    border-right: 10px solid orange;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    
     
 }
+.toppings{
+    height: 100%;
+}
 .toppings ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    gap: 10px;
+
+    
+
 
 }
+.toppings li{
+    border-bottom: 5px solid rgb(236, 149, 18);
+}
+
 .top{
     text-align: center;
     list-style: none;
 }
 
 .specials{
-    box-shadow: 0 0 15px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 25px;
-    background-color: #fffaf0db;
-    border: 5px solid orange;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap:5px;
-   
+    
+    
+    
+}
 
-}
-.specials h2{
-    max-height: 200px;
-}
 .special-container{
     display: grid;
     grid-template-rows: repeat(5,1fr);
+    justify-content: space-around;
+    height: 100%;
+    
+    
 }
 .flex-list{
     display: grid;
@@ -176,38 +241,43 @@ main{
 .flex-list li{
     list-style: none;
     text-align: left;
+    font-size: 1.2rem;
+    
+
 
 }
 .card-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,1fr);
-    padding: 10px;
-    gap: 10px;
-    height: 85vh;
+    padding: 50px;
+    gap: 50px;
+    
+    
+    
+    
+    
 }
 
 .menu-card{
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: repeat(2,1fr);
-    box-shadow: 0 0 10px rgb(78, 77, 77);
-    border-radius: 5px;
-    border: 3px solid orange;
-    height: 100%;
+    border-bottom: 5px solid orange;
+    
     padding: 5px;
-    
-    
+    width: 100%;
+    justify-self: center;
 }
 .img{
     grid-row: 1/3;
     align-self: center;
-    width: 150px;
-    height: 120px;
-    background-color: white;
-    border-radius: 25px;
+    width: 250px;
+    height: 200px;
+    
     justify-self: center;
-    border: 3px solid orange;
+    
+    
     
 }
 
@@ -224,8 +294,8 @@ main{
 
 
 footer{
-    width: 100vw;
-    background-color: rgb(250, 141, 32);
+    
+    background-color: rgb(244, 130, 53);
     height: 5vh;
     z-index: 2;
     

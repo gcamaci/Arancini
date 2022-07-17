@@ -190,7 +190,7 @@ class Menu{
 
     constructor(){
         this.page = document.createElement('div');
-        this.header = document.createElement('h2');
+        this.header = document.createElement('h1');
     };
 
     pizzaMenu(){
@@ -198,7 +198,7 @@ class Menu{
         this.page.classList.add('pizza-Menu')
         this.header.innerText = "Pizza";
         this.header.style.fontSize = '4rem'
-        this.page.appendChild(this.header);
+        
 
         const buildYourOwn = document.createElement('div');
         buildYourOwn.classList.add('build-your-own');
@@ -221,6 +221,22 @@ class Menu{
         const specialTitle = document.createElement('h2');
         specialTitle.innerText = 'Specials';
 
+        const pizzaImg1 = document.createElement('img');
+        pizzaImg1.src = arancini;
+        pizzaImg1.classList.add('pizza-img1');
+
+        const pizzaImg2 = document.createElement('img');
+        pizzaImg2.src = arancini;
+        pizzaImg2.classList.add('pizza-img2');
+        
+
+        const pizzaContainer = document.createElement('div');
+        pizzaContainer.classList.add('pizza-container');
+
+
+        pizzaContainer.append(buildYourOwn,specials)
+
+
         
 
 
@@ -228,9 +244,14 @@ class Menu{
 
         specials.appendChild(specialTitle);
         specials.appendChild(createSpecial())
-        
+
+        /*
+        this.page.appendChild(this.header);
+        this.page.appendChild(pizzaImg1);
         this.page.appendChild(buildYourOwn);
-        this.page.appendChild(specials);
+        this.page.appendChild(specials); */
+
+        this.page.append(this.header,pizzaImg1,pizzaContainer,pizzaImg2)
         
         return this.page
     }

@@ -1,4 +1,4 @@
-
+import arancini from '../images/arancini.png'
 
 const buildBanner = () => {
     const banner = document.createElement('div');
@@ -50,7 +50,14 @@ const buildBanner = () => {
 
     return banner
 };
+const homeImage = () =>{
+    const createImg = document.createElement('img');
+    createImg.src = arancini;
 
+
+    return createImg;
+
+}
 
 
 
@@ -61,6 +68,7 @@ const loadHome = () => {
     main.classList.add('home-page');
     //main.appendChild(makeSlider());
     main.appendChild(buildBanner());
+    main.appendChild(homeImage())
     //new Slider();
     
 

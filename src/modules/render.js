@@ -1,5 +1,6 @@
 import {loadHome} from "./home";
 import {loadMenu} from "./menu";
+import{loadAbout} from './about'
 import{loadContact} from './contact'
 
 function createHeader(){
@@ -75,7 +76,10 @@ function mainFinder(data){
     else if(data === 'menu'){
         loadMenu();
     }
-    else if(data === 'contact'){
+    else if(data === 'about'){
+        loadAbout();
+    }
+    else if(data =='contact'){
         loadContact();
     }
 
