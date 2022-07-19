@@ -190,14 +190,14 @@ class Menu{
 
     constructor(){
         this.page = document.createElement('div');
-        this.header = document.createElement('h1');
+        //this.header = document.createElement('h1');
     };
 
     pizzaMenu(){
 
         this.page.classList.add('pizza-Menu')
-        this.header.innerText = "Pizza";
-        this.header.style.fontSize = '4rem'
+        //this.header.innerText = "Pizza";
+        //this.header.style.fontSize = '4rem'
         
 
         const buildYourOwn = document.createElement('div');
@@ -220,21 +220,12 @@ class Menu{
 
         const specialTitle = document.createElement('h2');
         specialTitle.innerText = 'Specials';
-
-        const pizzaImg1 = document.createElement('img');
-        pizzaImg1.src = arancini;
-        pizzaImg1.classList.add('pizza-img1');
-
-        const pizzaImg2 = document.createElement('img');
-        pizzaImg2.src = arancini;
-        pizzaImg2.classList.add('pizza-img2');
         
 
-        const pizzaContainer = document.createElement('div');
-        pizzaContainer.classList.add('pizza-container');
+        
 
 
-        pizzaContainer.append(buildYourOwn,specials)
+       
 
 
         
@@ -251,14 +242,27 @@ class Menu{
         this.page.appendChild(buildYourOwn);
         this.page.appendChild(specials); */
 
-        this.page.append(this.header,pizzaImg1,pizzaContainer,pizzaImg2)
+        this.page.append(buildYourOwn,specials)
         
         return this.page
     }
 
 };
 
- const loadMenu = () => {
+
+const createBanner = (name,caption) => {
+    const banner = document.createElement('div');
+    banner.classList.add(`${name}-banner`);
+
+    const title = document.createElement('h1');
+    title.innerText = `${caption}`;
+
+    banner.append(title)
+
+    return banner
+
+};
+const loadMenu = () => {
     
     const main = document.querySelector('main');
     main.innerHTML = '';
@@ -267,13 +271,13 @@ class Menu{
 
     const pizza = new Menu();
     const appetizers = new Menu();
-
-    main.appendChild(pizza.pizzaMenu())
-    main.appendChild(menuCardContainer())
+    main.append(createBanner('menu','Menu'),pizza.pizzaMenu(),menuCardContainer())
+    
 
 
  };
  export{
     loadMenu,
+    createBanner
 
  }

@@ -1,4 +1,5 @@
-import arancini from '../images/arancini.png'
+import arancini from '../images/arancini.png';
+
 
 const buildBanner = () => {
     const banner = document.createElement('div');
@@ -6,20 +7,18 @@ const buildBanner = () => {
 
    
 
-    const bannerTitle = document.createElement('div');
-    bannerTitle.classList.add('banner-title');
+   
 
-    const bannerHeader = document.createElement('h2')
-    bannerHeader.textContent = "Benvenuti a Tutti";
+    const bannerHeader = document.createElement('h1')
+    bannerHeader.textContent = "Camaci's Pizzeria";
 
     const bannerPara = document.createElement('p');
     bannerPara.innerText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequatur voluptatum commodi exercitationem. Perspiciatis cupiditate placeat laudantium iure tempore aliquid nostrum voluptate";
     
     
-    bannerTitle.appendChild(bannerHeader);
-    bannerTitle.appendChild(bannerPara);
+  
 
-    banner.appendChild(bannerTitle);
+    banner.append(bannerHeader,bannerPara);
     
 
 
@@ -50,14 +49,6 @@ const buildBanner = () => {
 
     return banner
 };
-const homeImage = () =>{
-    const createImg = document.createElement('img');
-    createImg.src = arancini;
-
-
-    return createImg;
-
-}
 
 
 
@@ -67,8 +58,10 @@ const loadHome = () => {
     main.classList.remove('menu-page','about-page','contact-page');
     main.classList.add('home-page');
     //main.appendChild(makeSlider());
+    
     main.appendChild(buildBanner());
-    main.appendChild(homeImage())
+    
+    //main.appendChild(homeImage())
     //new Slider();
     
 
