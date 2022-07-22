@@ -5,9 +5,6 @@ const buildBanner = () => {
     const banner = document.createElement('div');
     banner.classList.add('banner-container');
 
-   
-
-   
 
     const bannerHeader = document.createElement('h1')
     bannerHeader.textContent = "Camaci's Pizzeria";
@@ -15,9 +12,7 @@ const buildBanner = () => {
     const bannerPara = document.createElement('p');
     bannerPara.innerText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequatur voluptatum commodi exercitationem. Perspiciatis cupiditate placeat laudantium iure tempore aliquid nostrum voluptate";
     
-    
   
-
     banner.append(bannerHeader,bannerPara);
     
 
