@@ -80,7 +80,7 @@ function mainFinder(data){
         loadAbout();
     }
     else if(data =='contact'){
-        loadContact();
+        loadContact()
     }
 
 }
