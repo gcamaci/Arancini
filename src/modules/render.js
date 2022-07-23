@@ -84,7 +84,7 @@ function mainFinder(data){
     }
 
 }
-function render(){
+const render = () => {
     const main = document.createElement('main');
     const footer = document.createElement('footer');
     document.body.appendChild(createHeader());
@@ -92,5 +92,8 @@ function render(){
     document.body.appendChild(footer);
     loadHome();
 
-}
-export default render;
+};
+export{
+    render,
+    mainFinder
+};

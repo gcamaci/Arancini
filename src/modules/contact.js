@@ -1,4 +1,7 @@
-
+const contactForm = () => {
+    const formContainer = document.createElement('section');
+    
+}
 
 
 

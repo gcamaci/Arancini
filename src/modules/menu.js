@@ -265,6 +265,7 @@ const createBanner = (name,caption) => {
 const loadMenu = () => {
     
     const main = document.querySelector('main');
+    document.body.style.backgroundImage = 'none';
     main.innerHTML = '';
     main.classList.remove('home-page','about-page','contact-page');
     main.classList.add('menu-page');

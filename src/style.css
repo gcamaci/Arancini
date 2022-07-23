@@ -24,6 +24,7 @@ header{
     color: rgb(236, 134, 18); 
     padding: 20px;
     
+    
 }
 nav{
     width: 30vw;
@@ -46,6 +47,8 @@ img{
 }
 main{
     min-height:85vh;
+    overflow: hidden;
+    
    
 
 }
@@ -54,7 +57,7 @@ main{
     z-index: -1; 
     
 
-    background-color: rgba(13, 12, 12, 0.75);
+    background-color: rgba(13, 12, 12, 0.5);
     
     
 }
@@ -66,26 +69,6 @@ main{
     
 }
 
-
-
-
-
-.slider{
-    position: relative;
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
-    box-shadow: 0 0 15px;
-    border-radius: 15px;
-
-}
-.slider-container{
-    display:flex;
-    
-    height: 100%;
-    transform: translate(0);
-    transition: transform .8s ease-in-out;
-}
 .btn-container{
     position:absolute;
     top: 50%;
@@ -110,7 +93,7 @@ main{
 }
 .banner-container h1{
     font-size: 6em;
-    color: orange;
+    color: white;
     text-decoration: underline 5px white;
 }
 .banner-container p{
@@ -154,9 +137,8 @@ main{
 }
 
 .menu-banner{
-    height: 90vh;
+    height: 20vh;
     
-    background-image: url('../src/images/background.png');
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,11 +150,11 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    
     width: 100%;
     height: 100%;
-    background-color: rgba(13, 12, 12, 0.8);
-    font-size: 18rem;
+    background-color: rgba(13, 12, 12, 0.9);
+    font-size: 8rem;
     color:white;
 }
 
@@ -254,12 +236,7 @@ main{
     grid-template-rows: repeat(5,1fr);
     justify-content: space-around;
     height: 100%;
-    width: 100%;
-    
-    
-    
-    
-    
+    width: 100%;    
 }
 .flex-list{
     display: grid;
@@ -275,9 +252,6 @@ main{
     list-style: none;
     text-align: left;
     font-size: 1.2rem;
-    
-
-
 
 }
 .toppings{
@@ -316,8 +290,6 @@ main{
     
     justify-self: center;
     
-    
-    
 }
 
 .name-price{
@@ -338,4 +310,99 @@ footer{
     height: 5vh;
     z-index: 2;
     
+}
+
+
+
+
+
+
+.about-page{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/car4.png');
+    background-position: center;
+    
+    
+}
+.about-banner{
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    color: white;
+    height: 20vh;
+    
+    
+    background-color: white;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+
+}
+.about-banner h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 12, 12, 0.9);
+    width: 100%;
+    height: 100%;
+    background-color: ;
+    font-size: 8rem;
+    color:white;
+}
+
+
+
+.fest-section,.catering-section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:rgba(245, 245, 245);  
+    gap: 50px;
+    padding: 20px;
+    
+    
+   
+}
+.fest-section div,.catering-section div{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+.fest-section h2,.catering-section h2{
+    color: orange ;
+    font-size: 3.5rem;
+}
+.fest-section img,.catering-section img{
+    width: 100%;
+    height: 50vh;
+    align-self: center;
+    justify-self: center;
+    border-radius:20px;
+    box-shadow: 0 0 5px;
+}
+
+.catering-section{
+    background-color: rgba(13, 12, 12, 0.9);
+    
+}
+.catering-section p{
+    color: white;
+}
+.catering-section img{
+    grid-column: 2/3;
+    box-shadow:none;
+}
+.catering-section div{
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
