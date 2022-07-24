@@ -117,6 +117,48 @@ const infoMenu = function(){
     hoursCard.classList.add('hours-card');
     hoursCard.classList.add('info-card')
 
+    const hoursTitle = document.createElement('h3')
+    hoursTitle.innerText = 'Our Hours';
+
+    
+
+    const hoursInfo = document.createElement('div')
+    hoursInfo.classList.add('hours-info');
+    
+    //times div
+    const times = document.createElement('div');
+    times.classList.add('times')
+    const week = document.createElement('p');
+    week.innerText = "Mon - Thurs: 10AM - 10PM"
+
+    const weekEnd = document.createElement('p');
+    weekEnd.innerText = "Fri - Sat: 12PM - 12AM";
+
+    const sunday = document.createElement('p');
+    sunday.innerText = 'Sunday: Closed'
+    
+    times.append(week,weekEnd,sunday);
+    
+
+    //contact info
+    const addressContainer = document.createElement('div');
+    addressContainer.classList.add('address-container');
+    const numAdd = document.createElement('p');
+    numAdd.innerText = '7370 Grand Ave'
+
+    const street = document.createElement('p');
+    street.innerText = ' Elmwood Park'
+
+    const zipState = document.createElement('p');
+    zipState.innerText = 'Illinois, 60707'
+
+    const phone = document.createElement('p');
+    phone.innerText = 'Phone: +555-555-555';
+
+
+    addressContainer.append(numAdd,street,zipState,phone);
+    hoursInfo.append(times,addressContainer)
+    hoursCard.append(hoursTitle,hoursInfo)
 
 
 

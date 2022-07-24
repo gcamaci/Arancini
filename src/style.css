@@ -565,3 +565,15 @@ textarea{
     width: 100%;
    
 }
+
+.hours-info{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+}
+
+.times{
+    padding: 5px;
+}
