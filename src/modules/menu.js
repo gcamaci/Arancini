@@ -279,6 +279,7 @@ const loadMenu = () => {
  };
  export{
     loadMenu,
-    createBanner
+    createBanner,
+    newCard
 
  }

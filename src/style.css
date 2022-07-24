@@ -327,7 +327,7 @@ footer{
     
     
 }
-.about-banner{
+.about-banner,.contact-banner{
     text-align: center;
     font-size: 4rem;
     width: 100%;
@@ -344,15 +344,14 @@ footer{
 
 
 }
-.about-banner h1{
+.about-banner h1, .contact-banner h1{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(13, 12, 12, 0.9);
     width: 100%;
     height: 100%;
-    background-color: ;
-    font-size: 8rem;
+    font-size: 5rem;
     color:white;
 }
 
@@ -362,7 +361,7 @@ footer{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color:rgba(245, 245, 245);  
+    background-color:rgb(245, 245, 245);  
     gap: 50px;
     padding: 20px;
     
@@ -405,4 +404,126 @@ footer{
 .catering-section div{
     grid-column: 1/2;
     grid-row: 1/2;
+}
+
+
+
+
+
+
+/*contact page*/
+.contact-page{
+    background-image: url('../src/images/menu-background.png');
+}
+.contact-banner{
+    border-bottom: 1px solid orange;
+}
+.form-container{
+    background-color: rgba(13, 12, 12, 0.9);
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 65vh;
+    
+
+    
+    
+    
+    
+   
+}
+
+form{
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    gap: 20px;
+    justify-self: center;
+    align-self: center;
+    border: 3px solid orange;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+.form-banner{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+input{
+   width: 100%;
+   height:50px;
+   padding: 5px;
+}
+textarea{
+    width: 100%;
+    height: 150px;
+}
+
+.catering-container{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 2fr;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.catering-card{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    border: none;
+    
+    height: 100%;
+   
+}
+
+.catering-card img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    height: 300px;
+   
+    
+    
+    
+
+    
+
+}
+.cards-banner{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+}
+.cards-banner h1{
+    font-size: 2.5rem;
+    width: 100%;
+}
+.catering-card .name-price{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
 }
