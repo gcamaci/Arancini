@@ -414,22 +414,19 @@ footer{
 /*contact page*/
 .contact-page{
     background-image: url('../src/images/menu-background.png');
+    background-color: rgba(13, 12, 12, 0.9);
 }
 .contact-banner{
     border-bottom: 1px solid orange;
 }
 .form-container{
-    background-color: rgba(13, 12, 12, 0.9);
-    display: flex;
-    flex-direction: column;
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1 1fr;
+   
     
     min-height: 65vh;
-    
-
-    
-    
-    
-    
    
 }
 
@@ -446,10 +443,10 @@ form{
     gap: 20px;
     justify-self: center;
     align-self: center;
-    border: 3px solid orange;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    
+   
+
+    grid-column: 2/3;
     
     
 }
@@ -476,38 +473,42 @@ textarea{
 }
 
 .catering-container{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 2fr;
-    gap: 20px;
-    text-align: center;
+    grid-template-rows: 100px 1fr;
+    gap: 50px;
     padding: 20px;
+    text-align: center;
+    grid-row: 2/3;
+    grid-column: 1/4;
+
 }
 
 .catering-card{
     display: flex;
     flex-direction: column;
-    
+    background-color: #ffffff;
     align-items: center;
-    border: none;
-    
+    width: 100%;
+    padding: 0px;
     height: 100%;
-   
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(237,136,29,1);
 }
 
 .catering-card img{
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    height: 300px;
+    
+    height: 350px;
+    
+    background-color: rgba(255, 166, 0, 0.91);
+    
+
    
     
-    
-    
-
-    
-
+   
+ 
 }
 .cards-banner{
     grid-column: 1/4;
