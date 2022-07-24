@@ -27,11 +27,11 @@ const createInput = (attributes) => {
 };
 
 const cateringCards = () => {
-    const cateringContainer = document.createElement('div');
+    const cateringContainer = document.createElement('section');
     cateringContainer.classList.add('catering-container');
 
-    const banner = createBanner('cards','Catering Options')
-    cateringContainer.appendChild(banner);
+    //const banner = createBanner('cards','Catering Options')
+    //cateringContainer.appendChild(banner);
     const cards = [
         {
             name:"Arancini",
@@ -68,6 +68,87 @@ const cateringCards = () => {
     return cateringContainer
 
 };
+
+const infoMenu = function(){
+    const infoSection = document.createElement('section');
+    infoSection.classList.add('info-container');
+
+    const banner = createBanner('aboutus','Camacis Pizzeria');
+    infoSection.appendChild(banner);
+
+    //Main info Section
+    const infoGrid = document.createElement('div');
+    infoGrid.classList.add('info-grid');
+    infoSection.appendChild(infoGrid);
+    //about card
+    const about = document.createElement('div');
+    about.classList.add('about-card');
+    about.classList.add('info-card')
+    const aboutTitle = document.createElement('h3');
+    const aboutText = document.createElement('p');
+    aboutTitle.innerText = "About Us";
+    aboutText.innerText = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis similique, commodi quis sequi voluptatum officiis! Aut nam tempore culpa voluptas.'
+    about.append(aboutTitle,aboutText);
+    //input card
+    const inputCard = document.createElement('div');
+    inputCard.classList.add('input-card');
+    inputCard.classList.add('info-card');
+
+    const inputTitle = document.createElement('h3');
+    inputTitle.innerText = 'Get News and Offers!';
+    //input wrapper
+    const inputWrap = document.createElement('div');
+    inputWrap.classList.add('wrap-input');
+    //creat input
+    const inputEmail = document.createElement('input');
+    inputEmail.setAttribute('type','email');
+    inputEmail.setAttribute('id',`aboutemail`)
+    inputEmail.setAttribute('name',`about-email`)
+    inputEmail.setAttribute('placeholder','Enter Your Email.')
+    //btn
+    const inptBtn = document.createElement('div');
+    inptBtn.classList.add('inpt-btn');
+
+
+    inputWrap.append(inputEmail,inptBtn);
+    inputCard.append(inputTitle,inputWrap);
+
+    const hoursCard = document.createElement('div');
+    hoursCard.classList.add('hours-card');
+    hoursCard.classList.add('info-card')
+
+
+
+
+
+    infoGrid.append(about,inputCard,hoursCard);
+
+
+
+
+
+
+    
+
+
+    return infoSection
+
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,7 +190,7 @@ const contactForm = () => {
 
     form.append(textArea,subBtn)
     formContainer.appendChild(form);
-    formContainer.appendChild(cateringCards());
+    //formContainer.appendChild(cateringCards());
 
 
     
@@ -129,7 +210,9 @@ const loadContact = () => {
    
     main.append(
         createBanner('contact',"Contact Us"),
-        contactForm()
+        contactForm(),
+        cateringCards(),
+        infoMenu()
     )
     
 };
