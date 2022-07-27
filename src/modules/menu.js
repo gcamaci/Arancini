@@ -6,6 +6,7 @@ import sfincone from '../images/sfincione.png';
 import eggplant from '../images/eggplant.png';
 import nutella from '../images/nutella.png';
 import cornetto from '../images/cornetto.png';
+import { infoMenu } from './contact';
 
 const createToppings = () => {
     const toppingsContainer = document.createElement('div');
@@ -272,7 +273,7 @@ const loadMenu = () => {
 
     const pizza = new Menu();
     const appetizers = new Menu();
-    main.append(createBanner('menu','Menu'),pizza.pizzaMenu(),menuCardContainer())
+    main.append(createBanner('menu','Menu'),pizza.pizzaMenu(),menuCardContainer(),infoMenu())
     
 
 

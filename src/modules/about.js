@@ -2,6 +2,7 @@ import car1 from '../images/mel-fest1.png';
 import arancini from '../images/arancini.png';
 import { mainFinder } from './render';
 import { createBanner } from './menu';
+import { infoMenu } from './contact';
 
 const createSection = (name,imgSrc,htext,ptext,btn) => {
     const section = document.createElement('section');
@@ -46,7 +47,8 @@ const loadAbout = () => {
     main.append(
         createBanner('about','About Us'),
         createSection('fest',car1,'Join Us Labor Day Weekend','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, tempora repudiandae? Ullam consectetur illum excepturi quod ratione esse quaerat iste?',false),
-        createSection('catering',arancini,'Contact Us for Catering','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, tempora repudiandae? Ullam consectetur illum excepturi quod ratione esse quaerat iste?',true)
+        createSection('catering',arancini,'Contact Us for Catering','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, tempora repudiandae? Ullam consectetur illum excepturi quod ratione esse quaerat iste?',true),
+        infoMenu()
     )
 }
 

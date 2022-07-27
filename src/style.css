@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url('./Lobster-Regular.ttf') format('ttf'),
+      url('./Lobster-Regular.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -95,6 +106,7 @@ main{
     font-size: 6em;
     color: white;
     text-decoration: underline 5px white;
+    font-family: 'Lobster';
 }
 .banner-container p{
     width: 500px;
@@ -556,6 +568,7 @@ textarea{
     flex-direction: column;
     justify-content: space-around;
     gap: 20px;
+    width: 100%;
 }
 
 .info-grid{

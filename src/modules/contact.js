@@ -263,6 +263,7 @@ const loadContact = () => {
 
 export{
     loadContact,
+    infoMenu
 }
 
 
