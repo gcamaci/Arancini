@@ -1,7 +1,8 @@
-import { createBanner, newCard} from "./menu";
+import {newCard} from "./menu";
 import panelle from '../images/panelle.png';
 import arancini from '../images/arancini.png';
 import panzeroti from '../images/panzerotti.png';
+import { updateHeader } from "./render";
 
 
 
@@ -73,8 +74,8 @@ const infoMenu = function(){
     const infoSection = document.createElement('section');
     infoSection.classList.add('info-container');
 
-    const banner = createBanner('aboutus','Camacis Pizzeria');
-    infoSection.appendChild(banner);
+    //const banner = createBanner('aboutus','Camacis Pizzeria');
+    //infoSection.appendChild(banner);
 
     //Main info Section
     const infoGrid = document.createElement('div');
@@ -205,11 +206,11 @@ const contactForm = () => {
     form.setAttribute('method','post');
 
     //create banner and append it 
-    const banner = createBanner('form','Contact Us');
-    const desc = document.createElement('p');
-    desc.innerText = 'For catering pricing and options please contact us and we will get back as soon as possible!';
-    banner.appendChild(desc);
-    form.append(banner);
+    //const banner = createBanner('form','Contact Us');
+    //const desc = document.createElement('p');
+    //desc.innerText = 'For catering pricing and options please contact us and we will get back as soon as possible!';
+    //banner.appendChild(desc);
+    //form.append(banner);
 
     //array of input array, pass through Create input
     const inputs = [
@@ -244,14 +245,13 @@ const contactForm = () => {
 
 const loadContact = () => {
     const main = document.querySelector('main');
-    document.body.style.backgroundImage = 'none';
     main.innerHTML = '';
+    
     main.classList.remove('menu-page','home-page','about-page');
     main.classList.add('contact-page');
-    
+    updateHeader('Contact');
    
     main.append(
-        createBanner('contact',"Contact Us"),
         contactForm(),
         cateringCards(),
         infoMenu()

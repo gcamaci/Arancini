@@ -7,9 +7,44 @@ function createHeader(){
     const header = document.createElement('header');
     header.appendChild(getTitle())
     header.appendChild(createNav())
+    header.appendChild(createBanner('','headbanner'))
+    
+
+    
+
     return header
 
 };
+function createBanner(caption,style){
+
+   
+    const banner = document.createElement('div');
+    banner.classList.add(`${style}-banner`);
+    
+
+    const title = document.createElement('h1');
+    title.classList.add(`${style}-text`)
+    
+    title.innerText = `${caption}`;
+
+    banner.append(title)
+
+    return banner
+
+};
+
+function updateHeader (page){
+    const title = document.querySelector('.headbanner-text');
+    title.innerText =''
+    if(page!=='Home'){
+        title.innerText=`${page}`;
+    }else{return}
+
+    
+}
+
+
+
 function getTitle (){
     const title = document.createElement('h1');
     title.classList.add('title');
@@ -95,5 +130,7 @@ const render = () => {
 };
 export{
     render,
-    mainFinder
+    mainFinder,
+    updateHeader,
+    createBanner,
 };

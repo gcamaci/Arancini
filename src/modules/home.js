@@ -1,5 +1,6 @@
 import arancini from '../images/arancini.png';
 import Background from '../images/car4.png'
+import { updateHeader } from './render';
 
 
 const buildBanner = () => {
@@ -50,7 +51,7 @@ const buildBanner = () => {
 
 const loadHome = () => {
     const main = document.querySelector('main');
-    document.body.style.backgroundImage = `url(${Background})`
+    updateHeader('Home');
     main.innerHTML = '';
     main.classList.remove('menu-page','about-page','contact-page');
     main.classList.add('home-page');

@@ -7,6 +7,7 @@ import eggplant from '../images/eggplant.png';
 import nutella from '../images/nutella.png';
 import cornetto from '../images/cornetto.png';
 import { infoMenu } from './contact';
+import { updateHeader } from './render';
 
 const createToppings = () => {
     const toppingsContainer = document.createElement('div');
@@ -251,9 +252,9 @@ class Menu{
 };
 
 
-const createBanner = (name,caption) => {
+const createBanner = (caption) => {
     const banner = document.createElement('div');
-    banner.classList.add(`${name}-banner`);
+    banner.classList.add(`header-banner`);
 
     const title = document.createElement('h1');
     title.innerText = `${caption}`;
@@ -266,14 +267,14 @@ const createBanner = (name,caption) => {
 const loadMenu = () => {
     
     const main = document.querySelector('main');
-    document.body.style.backgroundImage = 'none';
+    updateHeader('Menu');
     main.innerHTML = '';
     main.classList.remove('home-page','about-page','contact-page');
     main.classList.add('menu-page');
 
     const pizza = new Menu();
     const appetizers = new Menu();
-    main.append(createBanner('menu','Menu'),pizza.pizzaMenu(),menuCardContainer(),infoMenu())
+    main.append(pizza.pizzaMenu(),menuCardContainer(),infoMenu())
     
 
 

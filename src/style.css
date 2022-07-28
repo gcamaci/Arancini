@@ -1,10 +1,26 @@
 @font-face {
     font-family: 'Lobster';
-    src: url('./Lobster-Regular.ttf') format('ttf'),
-      url('./Lobster-Regular.ttf') format('ttf');
+    src: url('./Lobster-Regular.woff') format('woff'),
+      url('./Lobster-Regular.woff') format('woff');
     font-weight: 600;
     font-style: normal;
-  }
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./Lato-Regular.woff') format('woff'),
+      url('./Lato-Regular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Perm';
+    src: url('./Perm.woff') format('woff'),
+      url('./Perm.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
 
 
 
@@ -17,30 +33,34 @@
 
 body{
     min-height: 100vh;
-    background-image: url('./images/car4.png');
+    
     background-position: center;
     background-size: cover;  
+    font-family: 'Lato';
 }
 
 header{
     position: sticky;
     top: 0;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 10vh 10vh;
     align-items: center;
+    justify-content: center;
     z-index: 1;
     overflow: hidden;
-    background-color: rgba(13, 12, 12, 0.9);
+    
     color: rgb(236, 134, 18); 
     padding: 20px;
     
     
 }
 nav{
-    width: 30vw;
+    width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content:flex-end;
+    
     
 }
 
@@ -48,7 +68,6 @@ nav button{
     width: 100px;
     background-color: transparent;
     border: none;
-    color: white;
     font-size: 1.5rem;
 }
 img{
@@ -66,9 +85,10 @@ main{
 .home-page{
     height: 85vh;
     z-index: -1; 
+    background-image: url('./images/car4.png');
+
     
 
-    background-color: rgba(13, 12, 12, 0.5);
     
     
 }
@@ -97,14 +117,15 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    background-color: rgba(13, 12, 12, 0.8);
+
     text-align: center;
     gap: 5px;
     
 }
 .banner-container h1{
     font-size: 6em;
-    color: white;
+    color: orange;
     text-decoration: underline 5px white;
     font-family: 'Lobster';
 }
@@ -150,8 +171,8 @@ main{
 
 .menu-banner{
     height: 20vh;
-    
-    background-color: white;
+    font-family: 'Lobster';
+    background-color: rgba(13, 12, 12, 0.8);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -165,7 +186,7 @@ main{
     
     width: 100%;
     height: 100%;
-    background-color: rgba(13, 12, 12, 0.9);
+    background-color: rgba(13, 12, 12, 0.8);
     font-size: 8rem;
     color:white;
 }
@@ -270,14 +291,14 @@ main{
     height: 100%;
 }
 .card-container{
-    width: 75vw;
+    /*width: 75vw;*/
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4,1fr);
     padding: 50px 0px;
     gap: 50px;
     justify-self: center;
-    
+    padding: 50px;
     
     
     
@@ -289,7 +310,7 @@ main{
     grid-template-columns: 2fr 3fr;
     grid-template-rows: repeat(2,1fr);
     border-bottom: 5px solid orange;
-    
+    height: 200px;
     padding: 5px;
     width: 100%;
     justify-self: center;
@@ -308,9 +329,15 @@ main{
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 0px;
+    font-family: 'Perm';
+    color: orange;
+    font-weight: 800;
+    font-size: 1.7rem;
 }
+
+
 .card-desc{
     padding: 10px;
 }
@@ -334,38 +361,12 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('./images/car4.png');
-    background-position: center;
-    
-    
-}
-.about-banner,.contact-banner{
-    text-align: center;
-    font-size: 4rem;
-    width: 100%;
-    color: white;
-    height: 20vh;
-    
-    
     background-color: white;
     
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-
-
+    
+    
 }
-.about-banner h1, .contact-banner h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(13, 12, 12, 0.9);
-    width: 100%;
-    height: 100%;
-    font-size: 5rem;
-    color:white;
-}
+
 
 
 
