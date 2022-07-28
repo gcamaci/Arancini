@@ -7,7 +7,7 @@ function createHeader(){
     const header = document.createElement('header');
     header.appendChild(getTitle())
     header.appendChild(createNav())
-    header.appendChild(createBanner('','headbanner'))
+    header.appendChild(createBanner('','head'))
     
 
     
@@ -34,7 +34,7 @@ function createBanner(caption,style){
 };
 
 function updateHeader (page){
-    const title = document.querySelector('.headbanner-text');
+    const title = document.querySelector('.head-text');
     title.innerText =''
     if(page!=='Home'){
         title.innerText=`${page}`;
