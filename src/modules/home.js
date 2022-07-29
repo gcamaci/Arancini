@@ -1,12 +1,11 @@
 import arancini from '../images/arancini.png';
 import Background from '../images/car4.png'
-import { updateHeader } from './render';
+import { mainFinder, updateHeader } from './render';
 
 
 const buildBanner = () => {
     const banner = document.createElement('div');
     banner.classList.add('banner-container');
-
 
     const bannerHeader = document.createElement('h1')
     bannerHeader.textContent = "Camaci's Pizzeria";
@@ -17,7 +16,6 @@ const buildBanner = () => {
   
     banner.append(bannerHeader,bannerPara);
     
-
 
     const buttonContainer = document.createElement('div');
     buttonContainer.classList.add('banner-btn-container');
@@ -39,11 +37,6 @@ const buildBanner = () => {
     buttonContainer.appendChild(contactBtn);
 
     banner.appendChild(buttonContainer);
-    
-
-    
-
-
     return banner
 };
 
@@ -55,14 +48,7 @@ const loadHome = () => {
     main.innerHTML = '';
     main.classList.remove('menu-page','about-page','contact-page');
     main.classList.add('home-page');
-    //main.appendChild(makeSlider());
-    
     main.appendChild(buildBanner());
-    
-    //main.appendChild(homeImage())
-    //new Slider();
-    
-
 }
 
 export{

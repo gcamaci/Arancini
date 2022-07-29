@@ -175,8 +175,10 @@ const createSpecial = () => {
         const list = document.createElement('ul');
         list.classList.add('flex-list')
         const listName = document.createElement('li');
+        listName.classList.add('special-names');
         listName.innerText = special.name;
         const listDesc = document.createElement('li');
+        listDesc.classList.add('specials-desc')
         listDesc.innerText = special.desc;
 
         list.append(listName,listDesc);

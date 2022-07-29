@@ -8,20 +8,14 @@ function createHeader(){
     header.appendChild(getTitle())
     header.appendChild(createNav())
     header.appendChild(createBanner('','head'))
-    
-
-    
-
     return header
 
 };
 function createBanner(caption,style){
 
-   
     const banner = document.createElement('div');
     banner.classList.add(`${style}-banner`);
     
-
     const title = document.createElement('h1');
     title.classList.add(`${style}-text`)
     
@@ -53,7 +47,6 @@ function getTitle (){
 }
 function createNav(){
     const nav = document.createElement('nav');
-
 
     let btnArray = [];
     

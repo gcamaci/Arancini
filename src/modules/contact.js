@@ -9,17 +9,17 @@ import { updateHeader } from "./render";
 const createInput = (attributes) => {
     const inputContainer = document.createElement('div');
     inputContainer.classList.add('input-wrapper');
-
+    /*
     const label = document.createElement('label')
     label.setAttribute('for',`${attributes[0]}`);
     label.innerText = `${attributes[1]}`
-
+    */
     const input = document.createElement('input');
-    input.setAttribute('type',`${attributes[2]}`);
-    input.setAttribute('id',`${attributes[3]}`)
-    input.setAttribute('name',`${attributes[3]}`)
-    input.setAttribute('placeholder',`${attributes[4]}`)
-    inputContainer.append(label,input);
+    input.setAttribute('type',`${attributes[0]}`);
+    input.setAttribute('id',`${attributes[1]}`)
+    input.setAttribute('name',`${attributes[1]}`)
+    input.setAttribute('placeholder',`${attributes[2]}`)
+    inputContainer.appendChild(input);
 
 
     return inputContainer
@@ -110,7 +110,6 @@ const infoMenu = function(){
     const inptBtn = document.createElement('div');
     inptBtn.classList.add('inpt-btn');
 
-
     inputWrap.append(inputEmail,inptBtn);
     inputCard.append(inputTitle,inputWrap);
 
@@ -120,8 +119,6 @@ const infoMenu = function(){
 
     const hoursTitle = document.createElement('h3')
     hoursTitle.innerText = 'Our Hours';
-
-    
 
     const hoursInfo = document.createElement('div')
     hoursInfo.classList.add('hours-info');
@@ -161,18 +158,7 @@ const infoMenu = function(){
     hoursInfo.append(times,addressContainer)
     hoursCard.append(hoursTitle,hoursInfo)
 
-
-
-
     infoGrid.append(about,inputCard,hoursCard);
-
-
-
-
-
-
-    
-
 
     return infoSection
 
@@ -182,40 +168,21 @@ const infoMenu = function(){
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const contactForm = () => {
     const formContainer = document.createElement('section');
     formContainer.classList.add('form-container');
-    
     //create form
     const form = document.createElement('form');
     form.setAttribute('id','form');
     form.setAttribute('action'," ")
     form.setAttribute('method','post');
 
-    //create banner and append it 
-    //const banner = createBanner('form','Contact Us');
-    //const desc = document.createElement('p');
-    //desc.innerText = 'For catering pricing and options please contact us and we will get back as soon as possible!';
-    //banner.appendChild(desc);
-    //form.append(banner);
+    
 
     //array of input array, pass through Create input
     const inputs = [
-        ['name','Name:','text','name','Full Name'],
-        ['email','Email:','email','email','example@gmail.com'],
+        ['text','name','Full Name'],
+        ['email','email','example@gmail.com'],
     ]
 
     inputs.forEach((input)=>{
@@ -223,7 +190,6 @@ const contactForm = () => {
 
     })
     
-
     const textArea = document.createElement('textarea');
     textArea.setAttribute('placeholder','This is a text area');
 
@@ -234,9 +200,6 @@ const contactForm = () => {
     form.append(textArea,subBtn)
     formContainer.appendChild(form);
     //formContainer.appendChild(cateringCards());
-
-
-    
 
     return formContainer
     
@@ -258,8 +221,6 @@ const loadContact = () => {
     )
     
 };
-
-
 
 export{
     loadContact,
