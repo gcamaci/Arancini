@@ -171,12 +171,19 @@ const infoMenu = function(){
 const contactForm = () => {
     const formContainer = document.createElement('section');
     formContainer.classList.add('form-container');
+
+  
+
+
     //create form
     const form = document.createElement('form');
     form.setAttribute('id','form');
     form.setAttribute('action'," ")
     form.setAttribute('method','post');
 
+    const header = document.createElement('h2')
+    header.innerText = 'Contact Us'
+    form.appendChild(header)
     
 
     //array of input array, pass through Create input

@@ -373,7 +373,7 @@ main{
 
 footer{
     
-    background-color: rgb(244, 130, 53);
+    background-color:rgb(236, 149, 18);
     height: 5vh;
     z-index: 2;
     
@@ -490,13 +490,18 @@ form{
 }
 form button{
     width: 100px;
-    
+    height: 25px;
     border-radius: 15px;
     border: none;
     background-color:  rgba(244, 129, 53, 0.782);
     color: white;
 }
-
+form h2{
+    font-family: 'Lobster';
+    color: rgba(237,136,29,1);
+    text-shadow: 2px 2px black;
+    font-size: 2rem;
+}
 
 .input-wrapper{
     display: flex;
@@ -513,6 +518,10 @@ input{
    border: none;
    background-color: rgba(255, 166, 0, 0.5);
    color: white;
+   font-size: 15px;
+}
+::placeholder{
+    color: black;
 }
 textarea{
     width: 100%;
@@ -521,6 +530,7 @@ textarea{
     border: none;
     background-color: rgba(255, 166, 0, 0.5);
     border-radius: 15px;
+    font-size: 15px;
 }
 
 .catering-container{
