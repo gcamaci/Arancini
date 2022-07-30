@@ -112,7 +112,7 @@ function mainFinder(data){
     }
 
 }
-const render = () => {
+const render = (() => {
     const main = document.createElement('main');
     const footer = document.createElement('footer');
     document.body.appendChild(createHeader());
@@ -120,7 +120,7 @@ const render = () => {
     document.body.appendChild(footer);
     loadHome();
 
-};
+})();
 export{
     render,
     mainFinder,

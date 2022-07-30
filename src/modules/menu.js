@@ -190,68 +190,39 @@ const createSpecial = () => {
     return specialContainer;
 };
 
-class Menu{
 
-    constructor(){
-        this.page = document.createElement('div');
-        //this.header = document.createElement('h1');
-    };
+const pizzaMenu = () => {
+    const menuContainer = document.createElement('div')
+    menuContainer.classList.add('pizza-Menu')
 
-    pizzaMenu(){
+    const buildYourOwn = document.createElement('div');
+    buildYourOwn.classList.add('build-your-own');
+    //build your own markup
+    const ownTitle = document.createElement('h2');
+    ownTitle.innerText = 'Build your own';
 
-        this.page.classList.add('pizza-Menu')
-        //this.header.innerText = "Pizza";
-        //this.header.style.fontSize = '4rem'
+    const buildDisc = document.createElement('p')
+    buildDisc.classList.add('build-disc');
+    buildDisc.innerText = 'Choose 3 of any toppings, adittional toppings $1.50';
         
+    buildYourOwn.append(ownTitle,buildDisc,createToppings());
 
-        const buildYourOwn = document.createElement('div');
-        buildYourOwn.classList.add('build-your-own');
-        //build your own markup
-        const ownTitle = document.createElement('h2');
-        ownTitle.innerText = 'Build your own';
+    const specials = document.createElement('div');
+    specials.classList.add('specials');
 
-        const buildDisc = document.createElement('p')
-        buildDisc.classList.add('build-disc');
-        buildDisc.innerText = 'Choose 3 of any toppings, adittional toppings $1.50';
+    const specialTitle = document.createElement('h2');
+    specialTitle.innerText = 'Specials';
+    
+    specials.appendChild(specialTitle);
+    specials.appendChild(createSpecial())
+
+    menuContainer.append(buildYourOwn,specials)
         
-        buildYourOwn.appendChild(ownTitle);
-        buildYourOwn.appendChild(buildDisc);
-        buildYourOwn.appendChild(createToppings());
-
-
-        const specials = document.createElement('div');
-        specials.classList.add('specials');
-
-        const specialTitle = document.createElement('h2');
-        specialTitle.innerText = 'Specials';
+    return menuContainer
+    
         
+}
 
-        
-
-
-       
-
-
-        
-
-
-
-
-        specials.appendChild(specialTitle);
-        specials.appendChild(createSpecial())
-
-        /*
-        this.page.appendChild(this.header);
-        this.page.appendChild(pizzaImg1);
-        this.page.appendChild(buildYourOwn);
-        this.page.appendChild(specials); */
-
-        this.page.append(buildYourOwn,specials)
-        
-        return this.page
-    }
-
-};
 
 
 const createBanner = (caption) => {
@@ -274,9 +245,7 @@ const loadMenu = () => {
     main.classList.remove('home-page','about-page','contact-page');
     main.classList.add('menu-page');
 
-    const pizza = new Menu();
-    const appetizers = new Menu();
-    main.append(pizza.pizzaMenu(),menuCardContainer(),infoMenu())
+    main.append(pizzaMenu(),menuCardContainer(),infoMenu())
     
 
 
