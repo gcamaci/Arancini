@@ -8,6 +8,7 @@ const createSection = (name,imgSrc,htext,ptext,btn) => {
     section.classList.add(`${name}-section`);
 
     const festImage = document.createElement('img');
+    festImage.classList.add(`${name}-img`)
     festImage.src = imgSrc;
 
     const bannerText = document.createElement('div');

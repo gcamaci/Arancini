@@ -385,14 +385,11 @@ footer{
 
 
 .about-page{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    
-    
-    
+    background-color: rgba(13, 12, 12, 0.6);
+ 
 }
 
 
@@ -402,9 +399,10 @@ footer{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color:rgb(245, 245, 245);  
+    background-color: rgba(13, 12, 12, 0.9);
     gap: 50px;
     padding: 20px;
+    
     
     
    
@@ -412,7 +410,6 @@ footer{
 .fest-section div,.catering-section div{
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     justify-content: center;
     color: black;
@@ -422,7 +419,7 @@ footer{
     color: orange ;
     font-size: 3.5rem;
 }
-.fest-section img,.catering-section img{
+.fest-section img{
     width: 100%;
     height: 50vh;
     align-self: center;
@@ -430,24 +427,50 @@ footer{
     border-radius:20px;
     box-shadow: 0 0 5px;
 }
+.fest-section p {
+    color: white;
+    font-style: italic;
+    font-size: 1.2rem;
+}
 
 .catering-section{
-    background-color: rgba(13, 12, 12, 0.9);
+    background-color: white;
     
 }
+.catering-section h2{
+    text-shadow: 2px 2px rgb(78, 76, 76);
+
+}
 .catering-section p{
-    color: white;
+    color: grey;
+    font-style: italic;
+    text-shadow: 1px 1px grey;
+    font-size: 1.2rem;
 }
 .catering-section img{
     grid-column: 2/3;
-    box-shadow:none;
+    width: 400px;
+    height: 400px;
+    border: none;
+    box-shadow: none;
+    justify-self: center;
 }
 .catering-section div{
     grid-column: 1/2;
     grid-row: 1/2;
+    gap: 20px;
+    
 }
 
-
+.contact-btn{
+    width: 100px;
+    height: 50px;
+    padding:5px;
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px rgb(81, 80, 80);
+}
 
 
 
@@ -535,7 +558,6 @@ textarea{
 
 .catering-container{
 
-    
     display: flex;
     justify-content: space-around;
     background-color: rgba(255, 255, 255, 0.95);
@@ -570,14 +592,7 @@ textarea{
     height: auto;
     max-width: 250px;
     height: 200px;
-    
-    
-    
 
-   
-    
-   
- 
 }
 
 .catering-card .name-price{
@@ -607,7 +622,18 @@ textarea{
 }
 .info-card{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
    
+}
+.info-card h3{
+    font-size: 1.5rem;
+}
+.info-card input{
+    background-color: white;
 }
 
 .hours-info{
@@ -616,8 +642,4 @@ textarea{
     grid-template-columns: 1fr 1fr;
     
 
-}
-
-.times{
-    padding: 5px;
 }
